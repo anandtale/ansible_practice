@@ -1,0 +1,12 @@
+---
+- hosts: all
+  become: yes
+  connection: ssh
+  tasks:
+        - name: add users
+          user: name='{{item}}' state=present
+          with_items:
+                  - harsha1212
+                  - anand08
+                  - lokki123
+
